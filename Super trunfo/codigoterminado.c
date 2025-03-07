@@ -42,9 +42,7 @@ int main() {
     printf("PIB: R$ %.2f\n", pib01);
     printf("pontos turísticos: %d\n", pontos01);
     printf("Código da carta: %s\n", carta01);
-    printf("A Densidade Populacional é: %f hab/km²\n", populacao01 / area01 );
-    printf("O PIB per capita é: %f reais\n", pib01 / populacao01);
-
+    
     //Registro da Segunda Carta
 
     printf("                                           \n");
@@ -74,8 +72,6 @@ int main() {
     printf("PIB: R$ %.2f\n", pib02);
     printf("pontos turísticos: %d\n", pontos02);
     printf("Código da carta: %s\n", carta02);
-    printf("A Densidade Populacional é: %.2f hab/km²\n", populacao02 / area02 );
-    printf("O PIB per capita é: %.2f reais\n", pib02 / populacao02);
 
 
     return 0;
