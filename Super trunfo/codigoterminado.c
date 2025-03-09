@@ -4,14 +4,15 @@ int main() {
 
     //Definição das Variáveis
 
-    char Carta1[5], Carta2[5];
-    char estado01[50], estado02[50];
-    char cidade01[50], cidade02[50];
-    char carta01[5], carta02[5];
+    char estado01[20], estado02[20];
+    char cidade01[20], cidade02[20];
+    char carta01[10], carta02[10];
     int populacao01, populacao02;
     int pontos01, pontos02;
     float area01, area02;
     float pib01, pib02;
+    float densidade01, densidade02;
+    float pibpc01, pibpc02;
 
     //Resgisto da Primeira Carta
 
@@ -32,6 +33,10 @@ int main() {
     printf("Finalize ao atribuir um código para a carta (ex: A001, B002)\n");
     scanf("%s", carta01); 
 
+    // Cálculo da densidade populacional e PIB per capita
+    densidade01 = populacao01 / area01;
+    pibpc01 = pib01 / populacao01;
+
     //Apresentação dos dados registrados da primeira carta
 
     printf("---------* Carta 01 *---------\n");
@@ -42,7 +47,9 @@ int main() {
     printf("PIB: R$ %.2f\n", pib01);
     printf("pontos turísticos: %d\n", pontos01);
     printf("Código da carta: %s\n", carta01);
-    
+    printf("Densidade populacional: %.2f habitantes por km²\n", densidade01);
+    printf("PIB per capita: R$ %.2f\n", pibpc01);
+
     //Registro da Segunda Carta
 
     printf("                                           \n");
@@ -61,6 +68,10 @@ int main() {
     scanf("%d", &pontos02);
     printf("Agora, finalize ao atribuir um código para a carta (ex: A001, B002)\n");
     scanf("%s", carta02);
+    
+    // Cálculo da densidade populacional e PIB per capita para a segunda cidade
+    densidade02 = populacao02 / area02;
+    pibpc02 = pib02 / populacao02;
 
     //Apresentação dos dados registrados da segunda carta
 
@@ -72,7 +83,8 @@ int main() {
     printf("PIB: R$ %.2f\n", pib02);
     printf("pontos turísticos: %d\n", pontos02);
     printf("Código da carta: %s\n", carta02);
-
-
+    printf("Densidade populacional: %.2f habitantes por km²\n", densidade02);
+    printf("PIB per capita: R$ %.2f\n", pibpc02);
+    
     return 0;
 }
